@@ -1,0 +1,87 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #83a4d4, #b6fbff); /* Gradient background */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+.heading{
+    padding-bottom: 2%;
+    font-weight: bold;
+    align-items: center;
+    font-size: 40px;
+   font-family: Arial, Helvetica, sans-serif;
+   
+   
+  
+}
+
+.gallery-container {
+    text-align: center;
+}
+
+.filter-btns {
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #4a90e2;
+    color: #fff;
+    margin: 0 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: #50e3c2;
+}
+
+.filter-btn.active {
+    background-color: #50e3c2;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.item {
+    display: none;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.item.show {
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.4s ease, filter 0.4s ease, box-shadow 0.4s ease; /* Transition effects for images */
+}
+
+.item img:hover {
+    transform: scale(1.2) rotate(5deg); /* Zoom and rotate image slightly */
+    filter: brightness(1.2) contrast(1.1); /* Increase brightness and contrast */
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
